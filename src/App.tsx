@@ -1,5 +1,6 @@
 // import Counter from "./components/Counter"
 // import LoginPage from "./components/LoginPage"
+import FormsPage from "./components/FormsPage"
 import UsersPage from "./components/UsersPage"
 // import BasicFunction from "./typescript/BasicFunction"
 // import BasicTypes from "./typescript/BasicTypes"
@@ -20,7 +21,8 @@ function App() {
       {/* <BasicFunction /> */}
       {/* <Counter/> */}
       {/* <LoginPage/> */}
-      <UsersPage/>
+      {/* <UsersPage/> */}
+      <FormsPage />
     </main>
   )
 }
