@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -67,16 +68,16 @@ button:focus-visible {
   }
 }
 
+
 main {
-  width: 100vw;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   width: 100vw;
 }
 
-input{
+input {
   margin-bottom: 10px;
   padding: 5px;
 }

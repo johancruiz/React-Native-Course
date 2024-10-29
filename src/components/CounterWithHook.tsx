@@ -1,22 +1,27 @@
-import UseCounter from "../hooks/UseCounter"
+import { useCounter } from '../hooks/useCounter';
 
-const Counter = () => {
 
-    const {count, increase, decrease} = UseCounter({
-      initialValue: 20
-    })
+export const CounterWithHook = () => {
+
+  const { count, increaseBy } = useCounter({
+    initialValue: 5
+  });
+
+
   return (
-    <div>
-      <h3>Contador <small>{count}</small></h3>
+    <>
+      <h3>Contador: <small>{ count }</small></h3>
 
-      <button onClick={ () => increase(1) } >
-        +1
-      </button>
-      <button onClick={ () => decrease(2) } >
-        -1
-      </button>
-    </div>
+
+      <div>
+        <button onClick={ () => increaseBy(+1) }>+1</button>
+
+        &nbsp;
+        <button onClick={ () => increaseBy(-1) }>-1</button>
+
+
+      </div>
+    
+    </>
   )
 }
-
-export default Counter

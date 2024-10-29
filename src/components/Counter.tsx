@@ -1,29 +1,31 @@
-import { useState } from "react"
+import { useState } from 'react';
 
-const Counter = () => {
 
-    const [count, setCount] = useState(10)
 
-    const increase = (value: number) => {
-        setCount(count + value)
-    }
+export const Counter = () => {
 
-    const decrease = (value: number) => {
-        setCount(count - value)
-    }
+  const [ count, setCount ] = useState<number>(10);
+
+
+  const increaseBy = ( value: number ) => {
+    setCount( count + value );
+  }
+
 
   return (
-    <div>
-      <h3>Contador <small>{count}</small></h3>
+    <>
+      <h3>Contador: <small>{ count }</small></h3>
 
-      <button onClick={ () => increase(1) } >
-        +1
-      </button>
-      <button onClick={ () => decrease(1) } >
-        -1
-      </button>
-    </div>
+
+      <div>
+        <button onClick={ () => increaseBy(+1) }>+1</button>
+
+        &nbsp;
+        <button onClick={ () => increaseBy(-1) }>-1</button>
+
+
+      </div>
+    
+    </>
   )
 }
-
-export default Counter
